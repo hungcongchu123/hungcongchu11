@@ -32,7 +32,7 @@ void CalculateWaterBill()
         {
             Console.WriteLine("Enter the water meter reading of the previous month:");
             int waterPreviousMonth = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the water meter reading of this month:");
+            Console.WriteLine("Enter the water meter reading of this month:"); 
             int waterCurrentMonth = Convert.ToInt32(Console.ReadLine());
             if (waterPreviousMonth <= waterCurrentMonth)
             {
@@ -41,22 +41,22 @@ void CalculateWaterBill()
                 if (waterPerPerson > 0 && totalWater <= 10)
                 {
                     double bill = (totalWater * 5.973) * 1.1;
-                    Console.WriteLine("{0:C} total water bill:", bill);
+                    Console.WriteLine("{0:N}VND total water bill:", bill);
                 }
                 else if (waterPerPerson > 10 && waterPerPerson <= 20)
                 {
                     double bill = (totalWater * 7.052) * 1.1;
-                    Console.WriteLine("{0:C} total water bill:", bill);
+                    Console.WriteLine("{0:N}VND total water bill:", bill);
                 }
                 else if (waterPerPerson > 20 && waterPerPerson <= 30)
                 {
                     double bill = (totalWater * 8.699) * 1.1;
-                    Console.WriteLine("{0:C} total water bill:", bill);
+                    Console.WriteLine("{0:N}VND total water bill:", bill);
                 }
                 else
                 {
                     double bill = (totalWater * 15.929) * 1.1;
-                    Console.WriteLine("{0:C} total water bill:", bill);
+                    Console.WriteLine("{0:N}VND total water bill:", bill);
                 }
             }
             else
@@ -71,15 +71,14 @@ void CalculateWaterBill()
     }
     else if (typeCustomer == 2)
     {
-        // Administrative agency customer
-        Console.WriteLine("Enter the water meter reading of the previous month:");
+        // Administrative agency customer/-strong/-heart:>:o:-((:-hConsole.WriteLine("Enter the water meter reading of the previous month:");
         int waterPreviousMonth = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine("Please enter the current month's water meter reading:");
         int waterCurrentMonth = Convert.ToInt32(Console.ReadLine());
         if (waterPreviousMonth <= waterCurrentMonth)
         {
             double bill = (waterCurrentMonth - waterPreviousMonth) * 9955 * 1.1;
-            Console.WriteLine("{0:C} water bill for administrative public service agency", bill);
+            Console.WriteLine("{0:N}VND water bill for administrative public service agency", bill);
         }
         else
         {
@@ -96,7 +95,7 @@ void CalculateWaterBill()
         if (waterPreviousMonth <= waterCurrentMonth)
         {
             double bill = (waterCurrentMonth - waterPreviousMonth) * 11.615 * 1.1;
-            Console.WriteLine("{0:C} water bill for manufacturing unit", bill);
+            Console.WriteLine("{0:N}VND water bill for manufacturing unit", bill);
         }
         else
         {
@@ -113,7 +112,7 @@ void CalculateWaterBill()
         if (waterPreviousMonth <= waterCurrentMonth)
         {
             double bill = (waterCurrentMonth - waterPreviousMonth) * 22.068 * 1.1;
-            Console.WriteLine("{0:C} water bill for business service", bill);
+            Console.WriteLine("{0:N}VND water bill for business service", bill);
         }
         else
         {
@@ -127,4 +126,4 @@ void CalculateWaterBill()
 }
 
 // Run the program
-CalculateWaterBill();
+CalculateWaterBill(); 
